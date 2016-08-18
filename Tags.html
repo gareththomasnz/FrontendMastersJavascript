@@ -1,0 +1,44 @@
+<html>
+	<head></head>
+	<body>
+		<script type='text/javascript'>
+			// make functionality goes here
+			make = {};
+
+			(function(){
+				var tags = ["a", "div", "span", "form", "h1", "h2", "h3", "h4"];
+				for(var i=0; i<tags.length; i++){
+					(function(tag){
+						make[tag] = function(){
+							return document.createElement(tag);
+						};
+					})(tags[i]);
+					//tags.forEach(function(){
+					//	make[tag] = function(){
+					//		return document.createElement(tag);
+					//	};
+					//});
+				}
+			})();
+		</script>
+		<script type='text/javascript'>
+			var h1 = make.h1();
+
+			h1.innerHTML = "Hello World";
+			document.body.appendChild(h1);
+
+			var a = make.a();
+
+			a.href= "http://google.com";
+			a.innerHTML = "Google";
+
+			document.body.appendChild(a);
+			
+			var h2 = make.h2();
+			
+			h2.innerHTML = "It Works!";
+			document.body.appendChild(h2);
+			
+		</script>
+	</body>
+</html>
