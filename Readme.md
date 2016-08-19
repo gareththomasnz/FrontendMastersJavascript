@@ -1,6 +1,6 @@
 ## Synopsis
 
-Fronend Masters Tutorial for Javascript - Fundamantals to Advanced
+Frontend Masters Tutorial for Javascript - Fundamantals to Advanced
 
 
 ## Motivation
